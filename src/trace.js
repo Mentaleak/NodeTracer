@@ -33,4 +33,4 @@ class traceManager {
         }
     }
 }
-module.exports = tracer;
+module.exports = traceManager;
