@@ -1,5 +1,8 @@
 const path = require('path');
-const dotenv = require('dotenv/config');
+const dotenv = require('dotenv');
+dotenv.config({path: path.join(__dirname, "../.env")});
+// this points to an env in this folders parent (EG above src, eg should be root)
+
 const colors = require('colors');
 
 function ReadableTimestamp(){
