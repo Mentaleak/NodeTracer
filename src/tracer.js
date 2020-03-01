@@ -19,21 +19,15 @@ function ReadableTimestamp(){
 return stamp
 
 }
-
-function getError(){
-    const orig = Error.prepareStackTrace;
+function log(msg) {
+    if (process.env.TraceLogOn) {
+        var stamp = ReadableTimestamp(); 
+        const orig = Error.prepareStackTrace;
         Error.prepareStackTrace = (_, stack) => stack;
         const err = new Error();
         Error.captureStackTrace(err, arguments.callee);
         const callee = err.stack[0];
         Error.prepareStackTrace = orig;
-        return callee
-}
-
-function log(msg) {
-    if (process.env.TraceLogOn) {
-        var stamp = ReadableTimestamp(); 
-        var callee=getError()
         console.log(` ${stamp} `.black.bgWhite, `${path.relative(process.cwd(), callee.getFileName())}:${callee.getLineNumber()}: `.bold.blue + `${msg}`);
     } else {
         //console.log("Trace mode is disabled");
@@ -42,7 +36,12 @@ function log(msg) {
 function error(msg) {
     if (process.env.TraceErrOn) {
         var stamp = ReadableTimestamp(); 
-        var callee=getError()
+        const orig = Error.prepareStackTrace;
+        Error.prepareStackTrace = (_, stack) => stack;
+        const err = new Error();
+        Error.captureStackTrace(err, arguments.callee);
+        const callee = err.stack[0];
+        Error.prepareStackTrace = orig;
         console.log(` ${stamp} `.black.bgWhite, `${path.relative(process.cwd(), callee.getFileName())}:${callee.getLineNumber()}: `.bold.red + `${msg}`);
     } else {
         //console.log("Trace mode is disabled");
