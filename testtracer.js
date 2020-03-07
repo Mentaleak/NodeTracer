@@ -1,7 +1,7 @@
 var nodeTracer= require('./index.js');
 var tracer = new nodeTracer(
-    true, //TLS
-    true // debug
+    true, //Trace Log On
+    true // Trace Error On
 );
 
 tracer.log("test1A");
