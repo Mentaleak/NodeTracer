@@ -1,6 +1,11 @@
 # NodeTracer
- For tracing, debugging and logging in node
-
+This Module is for tracing, debugging and logging in node
+This is essentially a console.log but it starts with a Time stamp in the format
+YYYY:MM:dd:HH:mm:ss
+Year:Month:Day:Hour:Minute:Second
+Then it tells you the name of the origin file and the line of the log call.
+This will either be in blue or red depending on if it was called using .log() or .error()
+Then whatever message you want to pass
 
 # TestTracer Example
 ```javascript
