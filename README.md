@@ -23,3 +23,4 @@ tracerb.error("test2B");
 ```
 # Output would be
 
+![image](https://user-images.githubusercontent.com/22431171/76153978-7315d300-60a2-11ea-9de0-41800dd294a1.png)
