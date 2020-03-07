@@ -19,8 +19,8 @@ tracer.log("test1A");
 tracer.error("test1B");
 
 var tracerb = new nodeTracer(
-    true, //TLS
-    false // debug
+    true, //Trace Log On
+    false // Trace Error On
 );
 
 tracerb.log("test2A");
