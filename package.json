@@ -1,0 +1,32 @@
+{
+  "name": "nodetracer",
+  "version": "1.0.0",
+  "description": "Creates console logs that assist in traceing script progress and tracking errors",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mentaleak/NodeTracer.git"
+  },
+  "keywords": [
+    "tracer",
+    "trace",
+    "log",
+    "logs",
+    "debug",
+    "debugger"
+  ],
+  "author": "Zachary F. Fischer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mentaleak/NodeTracer/issues"
+  },
+  "homepage": "https://github.com/Mentaleak/NodeTracer#readme"
+}
