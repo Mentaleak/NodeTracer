@@ -23,5 +23,5 @@ tracerb.error("test2B");
 ```
 # Output would be
 `2020:03:07:18:03:41` testtracer.js:7: test1A 
- 2020:03:07:18:03:41  testtracer.js:8: test1B
- 2020:03:07:18:03:41  testtracer.js:15: test2A
+`2020:03:07:18:03:41`  testtracer.js:8: test1B
+`2020:03:07:18:03:41`  testtracer.js:15: test2A
